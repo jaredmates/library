@@ -15,31 +15,34 @@
     <title>Library</title>
   </head>
   <body>
-    <form action="">
-      <label for="title">Book Title</label>
-      <input type="text" name="title" id="title" />
+    <div class="container mt-4">
+      <h1 class="display-4 text-center">Library App</h1>
+      <form id="book-form" action="">
+        <div class="form-group">
+          <label for="title">Book Title</label>
+          <input type="text" name="title" id="title" class="form-control" />
+        </div>
 
-      <label for="author">Book Author</label>
-      <input type="text" name="author" id="author" />
+        <div class="form-group">
+          <label for="author">Book Author</label>
+          <input type="text" name="author" id="author" class="form-control" />
+        </div>
 
-      <label for="pages">Book Page Count</label>
-      <input type="text" name="pages" id="pages" />
+        <div class="form-group">
+          <label for="pages">Book Page Count</label>
+          <input type="text" name="pages" id="pages" class="form-control" />
+        </div>
 
-      <label for="read">Read Status</label>
-      <input type="text" name="read" id="read" />
+        <div class="form-group">
+          <label for="read">Read Status</label>
+          <input type="text" name="read" id="read" class="form-control" />
+        </div>
 
-      <button id="btn">Submit</button>
-    </form>
+        <button id="btn" type="submit" class="btn btn-primary">Submit</button>
 
-    <div class="card-container"></div>
-    <!-- <div class="card" style="width: 18rem">
-      <div class="card-body">
-        <h5 class="card-title">Book Title:</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Book Author:</h6>
-        <p class="card-text">Number of Pages:</p>
-        <p class="card-text">Read Status:</p>
-      </div>
-    </div> -->
+        <div class="card-container mt-5"></div>
+      </form>
+    </div>
 
     <script src="index.js"></script>
   </body>
