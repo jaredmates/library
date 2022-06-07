@@ -5,3 +5,7 @@
   grid-column-gap: 20px;
   padding: 20px;
 }
+
+.btn {
+  margin-top: 0.5em;
+}

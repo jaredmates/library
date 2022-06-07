@@ -40,9 +40,9 @@ function makeCard(book) {
   card.classList.add("card-text");
   readStatus.textContent = `Read Status: ${book.read}`;
 
-  let deleteButton = document.createElement("btn");
-  deleteButton.classList.add("btn", "btn-danger", "delete");
-  deleteButton.textContent = "Delete";
+  let deleteBtn = document.createElement("btn");
+  deleteBtn.classList.add("btn", "btn-danger", "delete");
+  deleteBtn.textContent = "Delete";
 
   cardContainer.appendChild(card);
   card.appendChild(cardBody);
@@ -50,7 +50,12 @@ function makeCard(book) {
   cardBody.appendChild(bookAuthor);
   cardBody.appendChild(pageNumber);
   cardBody.appendChild(readStatus);
-  cardBody.appendChild(deleteButton);
+  cardBody.appendChild(deleteBtn);
+
+  deleteBtn.addEventListener("click", (e) => {
+    // cardContainer.removeChild(card);
+    removeBook(e.target);
+  });
 }
 
 // event add book
@@ -86,12 +91,4 @@ function removeBook(el) {
   if (el.classList.contains("delete")) {
     el.parentElement.parentElement.remove();
   }
-}
-
-let deleteBtn = document.querySelector(".delete");
-
-if (deleteBtn) {
-  deleteBtn.addEventListener("click", (e) => {
-    removeBook(e.target);
-  });
 }
