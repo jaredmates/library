@@ -16,34 +16,63 @@
   </head>
   <body>
     <div class="container mt-4">
-      <h1 class="display-4 text-center">Library App</h1>
-      <form id="book-form" action="">
-        <div class="form-group">
-          <label for="title">Book Title</label>
-          <input type="text" name="title" id="title" class="form-control" />
-        </div>
+      <h1 class="display-4 text-center mb-5">Library App</h1>
 
-        <div class="form-group">
-          <label for="author">Book Author</label>
-          <input type="text" name="author" id="author" class="form-control" />
-        </div>
+      <div class="col-md-12 text-center mb-4">
+        <button class="btn btn-primary new-book">+Add New Book</button>
+      </div>
 
-        <div class="form-group">
-          <label for="pages">Book Page Count</label>
-          <input type="text" name="pages" id="pages" class="form-control" />
-        </div>
+      <div class="mod">
+        <form id="book-form" action="" class="mx-auto mod-content">
+          <h3 class="display-9 text-center mb-3">Add New Book</h1>
+          <div class="form-group">
+            <input
+              type="text"
+              name="title"
+              id="title"
+              class="form-control"
+              placeholder="Title"
+            />
+          </div>
+  
+          <div class="form-group">
+            <input
+              type="text"
+              name="author"
+              id="author"
+              class="form-control"
+              placeholder="Author"
+            />
+          </div>
+  
+          <div class="form-group">
+            <input
+              type="text"
+              name="pages"
+              id="pages"
+              class="form-control"
+              placeholder="Page Count"
+            />
+          </div>
+  
+          <div class="form-check">
+            <label for="read" class="form-check-label check">Read it?: </label>
+            <input
+              type="checkbox"
+              name="read"
+              id="read"
+              class="form-check-input"
+            />
+          </div>
+  
+          <div class="text-center">
+            <button id="btn" type="submit" class="btn btn-primary submit">Submit</button>
+          </div>
+        </form>
+      </div>
 
-        <div class="form-group">
-          <label for="read">Read Status</label>
-          <input type="text" name="read" id="read" class="form-control" />
-        </div>
-
-        <button id="btn" type="submit" class="btn btn-primary">Submit</button>
-
-        <div class="card-container mt-5"></div>
-      </form>
+      <div class="card-container mt-5"></div>
     </div>
-
     <script src="index.js"></script>
   </body>
 </html>
