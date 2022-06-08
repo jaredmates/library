@@ -19,6 +19,14 @@ body {
 
 .card-body {
   color: rgb(0, 0, 0);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.space {
+  margin-bottom: 1em;
 }
 
 .check {
@@ -44,7 +52,7 @@ label {
 
 form {
   width: 30%;
-  height: 46%;
+  max-height: 55%;
   background-color: rgb(186, 208, 202);
   border-radius: 10px;
   color: black;

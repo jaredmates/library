@@ -24,49 +24,55 @@
 
       <div class="mod">
         <form id="book-form" action="" class="mx-auto mod-content">
-          <h3 class="display-9 text-center mb-3">Add New Book</h1>
-          <div class="form-group">
-            <input
-              type="text"
-              name="title"
-              id="title"
-              class="form-control"
-              placeholder="Title"
-            />
-          </div>
-  
-          <div class="form-group">
-            <input
-              type="text"
-              name="author"
-              id="author"
-              class="form-control"
-              placeholder="Author"
-            />
-          </div>
-  
-          <div class="form-group">
-            <input
-              type="text"
-              name="pages"
-              id="pages"
-              class="form-control"
-              placeholder="Page Count"
-            />
-          </div>
-  
-          <div class="form-check">
-            <label for="read" class="form-check-label check">Read it?: </label>
-            <input
-              type="checkbox"
-              name="read"
-              id="read"
-              class="form-check-input"
-            />
-          </div>
-  
-          <div class="text-center">
-            <button id="btn" type="submit" class="btn btn-primary submit">Submit</button>
+          <h3 class="display-9 text-center mb-3">Add New Book</h3>
+          <div class="book-group">
+            <div class="form-group">
+              <input
+                type="text"
+                name="title"
+                id="title"
+                class="form-control"
+                placeholder="Title"
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                name="author"
+                id="author"
+                class="form-control"
+                placeholder="Author"
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="number"
+                name="pages"
+                id="pages"
+                class="form-control"
+                placeholder="Page Count"
+              />
+            </div>
+
+            <div class="form-check">
+              <label for="read" class="form-check-label check"
+                >Read it?:
+              </label>
+              <input
+                type="checkbox"
+                name="read"
+                id="read"
+                class="form-check-input"
+              />
+            </div>
+
+            <div class="text-center">
+              <button id="btn" type="submit" class="btn btn-primary submit">
+                Submit
+              </button>
+            </div>
           </div>
         </form>
       </div>
