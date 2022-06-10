@@ -14,10 +14,14 @@ class UI {
 
     // display all book cards from storage
     books.forEach((book) => UI.addBookCard(book));
+
+    // books.forEach((book, index) => UI.addBookCard(book, index));
+    // books.map((book, index) => UI.addBookCard(book, index));
   }
 
   // Make book card
   static addBookCard(book) {
+    // static addBookCard(book, index) {
     let cardContainer = document.querySelector(".card-container");
 
     let card = document.createElement("div");
@@ -26,6 +30,8 @@ class UI {
 
     let cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
+    // cardBody.setAttribute("id", index);
+    // cardBody.setAttribute("key", index);
 
     let bookTitle = document.createElement("h4");
     card.classList.add("card-title");
@@ -59,6 +65,11 @@ class UI {
     cardBody.appendChild(pageNumber);
     cardBody.appendChild(readStatus);
     cardBody.appendChild(deleteBtn);
+
+    // cardBody.querySelector(".delete").addEventListener("click", () => {
+    //   UI.deleteBook(index);
+    //   Library.removeBook(index);
+    // });
   }
 
   static deleteBook(el) {
@@ -116,6 +127,14 @@ class Library {
 
     localStorage.setItem("books", JSON.stringify(books));
   }
+
+  // static removeBook(index) {
+  //   const books = Library.getBooks();
+  //   console.log(index);
+  //   books.splice(index, 1);
+
+  //   localStorage.setItem("books", JSON.stringify(books));
+  // }
 }
 
 // Event: Display Books
